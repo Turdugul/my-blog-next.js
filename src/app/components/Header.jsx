@@ -1,6 +1,7 @@
 'use client';
 import { Button, Navbar, TextInput } from 'flowbite-react';
 import Link from 'next/link';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
@@ -9,7 +10,7 @@ import { useTheme } from 'next-themes';
 export default function Header() {
   const path = usePathname();
   const { theme, setTheme } = useTheme();
-  
+
   return (
     <Navbar className='border-b-2'>
       <Link
@@ -40,11 +41,20 @@ export default function Header() {
         >
           {theme === 'light' ? <FaSun /> : <FaMoon />}
         </Button>
-        <Link href='/sign-in'>
+        <SignedIn>
+          <UserButton
+            appearance={{
+              baseTheme: theme === 'light' ? 'light' : 'dark',
+            }}
+          />
+        </SignedIn>
+        <SignedOut>
+          <Link href='/sign-in'>
             <Button gradientDuoTone='purpleToBlue' outline>
-              Sign In
+              Sign in
             </Button>
-          </Link> 
+          </Link>
+        </SignedOut>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
