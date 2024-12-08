@@ -1,12 +1,15 @@
 'use client';
+
 import { useUser } from '@clerk/nextjs';
 import { Alert, Button, FileInput, Select, TextInput } from 'flowbite-react';
+
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 const ReactQuill = dynamic(() => import('react-quill-new'), { ssr: false });
 // https://dev.to/a7u/reactquill-with-nextjs-478b
 import 'react-quill-new/dist/quill.snow.css';
+
 import {
   getDownloadURL,
   getStorage,
@@ -14,10 +17,9 @@ import {
   uploadBytesResumable,
 } from 'firebase/storage';
 import { app } from '@/firebase';
+
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-
-
 
 export default function CreatePostPage() {
   const { isSignedIn, user, isLoaded } = useUser();
@@ -26,7 +28,6 @@ export default function CreatePostPage() {
   const [imageUploadProgress, setImageUploadProgress] = useState(null);
   const [imageUploadError, setImageUploadError] = useState(null);
   const [formData, setFormData] = useState({});
-
   const [publishError, setPublishError] = useState(null);
   const router = useRouter();
   console.log(formData);
@@ -67,6 +68,7 @@ export default function CreatePostPage() {
       console.log(error);
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -93,16 +95,18 @@ export default function CreatePostPage() {
       setPublishError('Something went wrong');
     }
   };
+
   if (!isLoaded) {
     return null;
   }
+
   if (isSignedIn && user.publicMetadata.isAdmin) {
     return (
       <div className='p-3 max-w-3xl mx-auto min-h-screen'>
         <h1 className='text-center text-3xl my-7 font-semibold'>
           Create a post
         </h1>
-        <form className='flex flex-col gap-4 ' onSubmit={handleSubmit}>
+        <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
           <div className='flex flex-col gap-4 sm:flex-row justify-between'>
             <TextInput
               type='text'
@@ -115,9 +119,10 @@ export default function CreatePostPage() {
               }
             />
             <Select
-               onChange={(e) =>
+              onChange={(e) =>
                 setFormData({ ...formData, category: e.target.value })
-              }>
+              }
+            >
               <option value='uncategorized'>Select a category</option>
               <option value='javascript'>JavaScript</option>
               <option value='reactjs'>React.js</option>
@@ -125,12 +130,12 @@ export default function CreatePostPage() {
             </Select>
           </div>
           <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
-          <FileInput
+            <FileInput
               type='file'
               accept='image/*'
               onChange={(e) => setFile(e.target.files[0])}
             />
-             <Button
+            <Button
               type='button'
               gradientDuoTone='purpleToBlue'
               size='sm'

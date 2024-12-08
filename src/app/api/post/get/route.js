@@ -41,4 +41,3 @@ export const POST = async (req) => {
     console.log('Error getting posts:', error);
   }
 };
-

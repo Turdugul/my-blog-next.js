@@ -6,6 +6,7 @@ export const POST = async (req) => {
   try {
     await connect();
     const data = await req.json();
+
     if (
       !user ||
       user.publicMetadata.userMongoId !== data.userMongoId ||
