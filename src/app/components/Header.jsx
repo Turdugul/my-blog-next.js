@@ -35,7 +35,7 @@ export default function Header() {
         href='/'
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
-        <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
+        <span className='px-2 py-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-lg text-white'>
           Gul&apos;s
         </span>
         Blog
@@ -66,6 +66,7 @@ export default function Header() {
             appearance={{
               baseTheme: theme === 'light' ? 'light' : 'dark',
             }}
+              userProfileUrl='/dashboard?tab=profile'
           />
         </SignedIn>
         <SignedOut>
