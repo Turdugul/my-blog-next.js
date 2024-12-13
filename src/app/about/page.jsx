@@ -24,11 +24,18 @@ export default function About() {
               </p>
   
               <p>
-                This website is created using Next.js and{' '}
+                This website is created using  
+                <a
+                  href='https://nextjs.org/docs'
+                  target='_blank'
+                  className='text-blue-500 hover:underline'
+                >{' '}
+                  Next.js  
+                </a> {' '}and{' '}
                 <a
                   href='https://go.clerk.com/fgJHKlt'
                   target='_blank'
-                  className='text-teal-500 hover:underline'
+                  className='text-blue-500 hover:underline'
                 >
                   Clerk
                 </a>

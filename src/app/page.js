@@ -21,19 +21,25 @@ export default async function Home() {
         <p className='text-gray-500 text-sm sm:text-base'>
           Discover a variety of articles and tutorials on topics such as web
           development, software engineering, and programming languages, all
-          brought to you through a blog built with Next.js and{' '}
-          <a
-            href='https://go.clerk.com/fgJHKlt'
-            className='text-teal-500 hover:underline'
-            target='_blank'
-          >
-            Clerk
-          </a>
+          brought to you through a blog built with  <a
+                  href='https://nextjs.org/docs'
+                  target='_blank'
+                  className='text-blue-500 hover:underline'
+                >{' '}
+                  Next.js  
+                </a> {' '}and{' '}
+                <a
+                  href='https://go.clerk.com/fgJHKlt'
+                  target='_blank'
+                  className='text-blue-500 hover:underline'
+                >
+                  Clerk
+                </a>
           .
         </p>
         <Link
           href='/search'
-          className='text-xs sm:text-sm text-teal-500 font-bold hover:underline'
+          className='text-xs sm:text-sm text-blue-500 font-bold hover:underline'
         >
           View all posts
         </Link>
@@ -45,7 +51,7 @@ export default async function Home() {
         <RecentPosts limit={9} />
         <Link
           href={'/search?category=null'}
-          className='text-lg text-teal-500 hover:underline text-center'
+          className='text-lg text-blue-500 hover:underline text-center'
         >
           View all posts
         </Link>
