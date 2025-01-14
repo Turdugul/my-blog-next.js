@@ -38,34 +38,37 @@ Make sure you have the following installed:
 
 2. Navigate into the project folder:
 
-  ```bash
-   cd <project_folder>
+  ` 
+  cd <project_folder> 
+  `
 
    
 3. Install the dependencies:
-     ```bash
-   npm install
+
+   `npm install
    # or if using yarn
-   yarn install
-   ```
+   yarn install`
 
 4. Set up your environment variables for Clerk and MongoDB. Refer to the official documentation for instructions.
 
 5. Start the development server:
-     ```bash
-    npm run dev
+
+    `npm run dev
     # or if using yarn
-    yarn dev
+    yarn dev`
 
-    6. Open your browser and go to http://localhost:3000 to view the application.
 
-Documentation
+6. Open your browser and go to http://localhost:3000 to view the application.
+
+
+### Documentation
+
 For more information on the technologies used, please refer to the official documentation of each:
 
-Clerk Documentation
-Next.js Documentation
-MongoDB Documentation
-Mongoose Documentation
-Tailwind CSS Documentation
+- [**Clerk Documentation**](https://clerk.dev/docs)
+- [**Next.js Documentation**](https://nextjs.org/docs)
+- [**MongoDB Documentation**](https://www.mongodb.com/docs/)
+- [**Mongoose Documentation**](https://mongoosejs.com/docs/)
+- [**Tailwind CSS Documentation**](https://tailwindcss.com/docs)
 
 
