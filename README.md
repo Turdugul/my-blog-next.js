@@ -33,18 +33,21 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Turdugul/my-blog-next.js.git
+   git clone https://github.com/Turdugul/my-blog-next.js.git 
+
 
 2. Navigate into the project folder:
 
   ```bash
    cd <project_folder>
 
+   
 3. Install the dependencies:
      ```bash
    npm install
    # or if using yarn
    yarn install
+   ```
 
 4. Set up your environment variables for Clerk and MongoDB. Refer to the official documentation for instructions.
 
@@ -64,3 +67,5 @@ Next.js Documentation
 MongoDB Documentation
 Mongoose Documentation
 Tailwind CSS Documentation
+
+
