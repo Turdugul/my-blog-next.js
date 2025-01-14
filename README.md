@@ -42,11 +42,9 @@ Make sure you have the following installed:
   cd <project_folder> 
   `
 
-   
 3. Install the dependencies:
 
    `npm install
-   # or if using yarn
    yarn install`
 
 4. Set up your environment variables for Clerk and MongoDB. Refer to the official documentation for instructions.
@@ -54,7 +52,6 @@ Make sure you have the following installed:
 5. Start the development server:
 
     `npm run dev
-    # or if using yarn
     yarn dev`
 
 
