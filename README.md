@@ -44,15 +44,13 @@ Make sure you have the following installed:
 
 3. Install the dependencies:
 
-   `npm install
-   yarn install`
+   `npm install` or ` yarn install`
 
 4. Set up your environment variables for Clerk and MongoDB. Refer to the official documentation for instructions.
 
 5. Start the development server:
 
-    `npm run dev
-    yarn dev`
+    ` npm run dev` or `yarn dev `
 
 
 6. Open your browser and go to http://localhost:3000 to view the application.
